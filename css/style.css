@@ -1,0 +1,137 @@
+/*
+ * ESTILOS GERAIS DO CORPO DA PÁGINA E CENTRALIZAÇÃO
+ */
+body {
+    margin: 0; /* Remove margem padrão */
+    background-color: #f0f0f0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    /* Centralização do Cartão na Tela */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; /* Altura total da tela */
+    flex-direction: column; 
+    padding: 50px 0; 
+}
+
+/*
+ * ESTILO DO CARTÃO PRINCIPAL (ONDE FICAM A FOTO E INFORMAÇÕES)
+ */
+#foto { 
+    background-color: white; /* Fundo branco simulando cartão */
+    padding: 30px; /* Mais espaço interno para visualização */
+    border-radius: 15px; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
+    width: 300px; /* Largura fixa do cartão */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#foto img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; /* Imagem redonda */
+    display: block; 
+    margin: 0 auto 15px auto; 
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border: 3px solid #0077b5; /* Borda da foto para destaque */
+}
+
+/* * ESTILOS PARA TEXTOS INTERNOS DO CARTÃO (SUGESTÕES) 
+ * OBS: Se o seu HTML usar <H1> para o nome e <P> para o cargo.
+ */
+#foto h1 {
+    font-size: 1.5em; /* Nome/Título */
+    color: #333;
+    margin: 5px 0 5px 0; /* Ajusta espaçamento */
+}
+
+#foto p {
+    font-size: 1em; /* Cargo/Descrição */
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/*
+ * ESTILO DA ÁREA DE REDES SOCIAIS
+ */
+#redes-sociais {
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 15px; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
+    width: 300px; 
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+/* Estilo dos Links individuais dentro da div de Redes */
+#redes-sociais a {
+    display: block; /* Cada link ocupa uma linha */
+    text-decoration: none; 
+    color: white; /* Cor do texto no link */
+    font-weight: bold; 
+    background-color: #0077b5; /* Cor de fundo para simular um botão */
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#redes-sociais a:hover {
+    background-color: #005f92; /* Efeito ao passar o mouse */
+}
+
+/*
+ * ESTILO DO BOTÃO DE TROCA DE TEMA
+ */
+#trocar-tema {
+    display: block; 
+    margin: 20px auto 0 auto; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #0077b5; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+#trocar-tema:hover {
+    background-color: #005f92;
+}
+
+/*
+ * ESTILOS DO TEMA ESCURO (Aplicados quando a classe 'tema-escuro' é adicionada ao body pelo JavaScript)
+ */
+body.tema-escuro {
+    background-color: #222;
+    color: #f0f0f0;
+}
+
+body.tema-escuro #foto,
+body.tema-escuro #redes-sociais {
+    background-color: #333; /* Fundo escuro para os cartões */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5); 
+}
+
+body.tema-escuro #foto h1,
+body.tema-escuro #foto p {
+    color: #f0f0f0; /* Texto claro no tema escuro */
+}
+
+body.tema-escuro #redes-sociais a {
+    background-color: #555;
+    color: #aaf;
+}
+
+body.tema-escuro #redes-sociais a:hover {
+    background-color: #666;
+}
+
+body.tema-escuro #trocar-tema { 
+    background-color: #777;
+    color: white;
+}

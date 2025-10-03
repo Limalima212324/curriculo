@@ -185,3 +185,10 @@ hr {
     cursor: pointer; 
     transition: background-color 0.3s;
 }
+
+
+#email a {
+    color: #070606;
+    text-decoration: none;
+
+}

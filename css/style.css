@@ -3,39 +3,72 @@
  */
 body {
     margin: 0; /* Remove margem padrão */
-    background-color: #f0f0f0;
+    background-color: #20d63e; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    /* Centralização do Cartão na Tela */
-    display: flex;
+    display: flex; 
     justify-content: center; 
     align-items: center; 
-    min-height: 100vh; /* Altura total da tela */
+    min-height: 100vh; 
     flex-direction: column; 
     padding: 50px 0; 
+    background-image: url("../img/olhar.jpeg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: white;
 }
 
 /*
  * ESTILO DO CARTÃO PRINCIPAL (ONDE FICAM A FOTO E INFORMAÇÕES)
  */
+h1 {
+    font-family: 'Times New Roman', Times, serif; /* Fonte clássica para o título */
+    border-radius: 8px;
+    background-color: rgb(15, 106, 30);
+    font-size: 30px;
+    text-align: center;
+    border: 5px solid #ffffff; /* borda externa colorida */
+    margin-top: 10px; /* Espaço acima do cartão */
+    transition: background-color 0.3s;
+    display: block; /* Cada link ocupa uma linha */
+    color: white;
+}
+ p {
+    font-family: comiComic Sans MS, Comic Sans, cursive;/* Fonte casual para o texto */
+    font-size: 16px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    background-color: rgb(15, 106, 30);
+    border-radius: 20px;
+    width: 300px; /* Largura fixa do cartão */
+    border: 5px solid #fdfdfd; /* borda externa colorida */
+    margin-top: 10px; /* Espaço acima do cartão */
+    transition: background-color 0.3s;
+    display: block; /* Cada link ocupa uma linha */
+ }
+
+
+ 
 #foto { 
-    background-color: white; /* Fundo branco simulando cartão */
+    background-color:  rgb(15, 106, 30); /* Fundo branco simulando cartão */
     padding: 30px; /* Mais espaço interno para visualização */
-    border-radius: 15px; 
+    border-radius: 20px; /* Cantos arredondados */
     box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
     width: 300px; /* Largura fixa do cartão */
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center; /* Centraliza conteúdo */
+    margin-bottom: 20px; /* Espaço abaixo do cartão */
+    border: 5px solid #f6f6f6; /* borda externa colorida */
 }
 
 #foto img {
-    width: 150px; 
-    height: 150px; 
-    border-radius: 50%; /* Imagem redonda */
-    display: block; 
-    margin: 0 auto 15px auto; 
+    width: 150px; /* Tamanho fixo para a imagem */
+    height: 150px; /* Tamanho fixo para a imagem */
+    border-radius: 30%; /* Imagem redonda */
+    display: block; /* Remove espaço em linha */
+    margin: 0 auto 15px auto; /*Centraliza a imagem e adiciona margem inferior */
     object-fit: cover; /* Garante que a imagem preencha o círculo */
-    border: 3px solid #0077b5; /* Borda da foto para destaque */
+    border: 6px solid #f1f1f1; /* Borda da foto para destaque */
+    /* border-radius: 30px; Borda arredondada */
 }
 
 /* * ESTILOS PARA TEXTOS INTERNOS DO CARTÃO (SUGESTÕES) 
@@ -43,14 +76,14 @@ body {
  */
 #foto h1 {
     font-size: 1.5em; /* Nome/Título */
-    color: #333;
+    color: #333;/* Cor primária */
     margin: 5px 0 5px 0; /* Ajusta espaçamento */
 }
 
 #foto p {
     font-size: 1em; /* Cargo/Descrição */
-    color: #666;
-    margin-bottom: 20px;
+    color: #666;/* Cor secundária */
+    margin-bottom: 20px;/* Espaço abaixo do texto */
 }
 
 
@@ -58,13 +91,14 @@ body {
  * ESTILO DA ÁREA DE REDES SOCIAIS
  */
 #redes-sociais {
-    background-color: white; 
-    padding: 20px; 
-    border-radius: 15px; 
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
-    width: 300px; 
-    text-align: center; 
-    margin-top: 10px; 
+    background-color: rgb(15, 106, 30); /* Fundo branco para o cartão */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Sombra para destaque */
+    width: 300px; /* Largura fixa */
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: 10px; /* Espaço acima do cartão */
+    border: 5px solid #ffffff; /* borda externa colorida */
 }
 
 /* Estilo dos Links individuais dentro da div de Redes */
@@ -73,8 +107,8 @@ body {
     text-decoration: none; 
     color: white; /* Cor do texto no link */
     font-weight: bold; 
-    background-color: #0077b5; /* Cor de fundo para simular um botão */
-    padding: 10px 0;
+    background-color: #20d63e; /* Cor de fundo para simular um botão */
+    padding: 10px 0; 
     margin: 10px auto;
     border-radius: 8px;
     transition: background-color 0.3s;
@@ -93,14 +127,14 @@ body {
     padding: 10px 20px; 
     border: none; 
     border-radius: 5px; 
-    background-color: #0077b5; 
+    background-color: #20d63e; 
     color: white; 
     cursor: pointer; 
     transition: background-color 0.3s;
 }
 
 #trocar-tema:hover {
-    background-color: #005f92;
+    background-color: #4d5b60;
 }
 
 /*
@@ -134,4 +168,20 @@ body.tema-escuro #redes-sociais a:hover {
 body.tema-escuro #trocar-tema { 
     background-color: #777;
     color: white;
+}
+
+hr {
+    color: black; /* Cor da linha horizontal */
+}
+
+#portfolio {
+    display: block; 
+    margin: 20px auto 0 auto; 
+    padding: 10px 40px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #20d63e; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
 }

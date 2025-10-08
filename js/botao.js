@@ -1,93 +1,132 @@
-// const botao = document.getElementById('trocar-tema'); // corresponde ao botão
-// botao.addEventListener('click', function() { // aqui captura o click
-//     // Troca a classe 'tema-escuro' no body
-//     document.body.classList.toggle('tema-escuro');
-//     /* aqui ele pensa da seguinte forma, olha
-//     vai ver se o body tem a classe tema-escuro
-//     se tiver blz remove se nao tiver blz adiciona */
-// });
-
-
 // Botão de troca de tema
-const botao = document.getElementById('trocar-tema'); // corresponde ao botão "Trocar Tema"
-botao.addEventListener('click', function() {
-    document.body.classList.toggle('tema-escuro');
-    // Alterna a classe 'tema-escuro' no body
-});
+const botao = document.getElementById('trocar-tema'); // Seleciona o botão com o ID 'trocar-tema'
+if (botao) {
+    botao.addEventListener('click', function() { // Adiciona um "ouvinte" de evento para o clique no botão
+        document.body.classList.toggle('tema-escuro'); // Alterna a classe 'tema-escuro' no <body> para trocar o tema
+    });
+}
 
 // Botão do Portfólio
-const abrirPortfolio = document.getElementById("portfolio"); // corrigido: id igual ao HTML
+const abrirPortfolio = document.getElementById("portfolio"); // Seleciona o link/botão com o ID 'portfolio'
 
-abrirPortfolio.addEventListener("click", function (event) {
-    event.preventDefault(); // impede o comportamento padrão do botão
+if (abrirPortfolio) {
+    abrirPortfolio.addEventListener("click", function (event) { // Adiciona um "ouvinte" de evento para o clique no botão do portfólio
+        event.preventDefault(); // Impede que o link/botão execute seu comportamento padrão (como navegar para outra página)
 
-    // Abre uma nova janela para o portfólio
-    const novaJanela = window.open("", "Portilofio", "width=800,height=600");
+        // Abre uma nova janela (pop-up) para exibir o portfólio
+        const novaJanela = window.open("", "Portilofio", "width=900,height=700");
 
-    // Escreve o conteúdo HTML da galeria na nova janela
-    novaJanela.document.write(` 
-        <!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
-            <meta charset="UTF-8">
-            <title>Portfólio</title>
-            <style>
-                body {
-                    font-family: times new roman, serif;
-                    text-align: center;
-                    background-color: #f9f9f9;
-                    margin: 0;
-                    padding: 20px;
-                    box-sizing: border-box;
-                    overflow-y: scroll;
-                
-                }
-                h1 {
-                    margin-bottom: 20px;
-                }
-                .galeria {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 15px;
-                    justify-content: center;
-                    padding: 10px;
-                }
-                .galeria img {
-                    width: 220px;
-                    height: auto;
-                    border-radius: 10px;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-                    transition: transform 0.3s;
-                }
-                .galeria img:hover {
-                    transform: scale(1.1);
-                }
+        // Escreve todo o conteúdo HTML da galeria de certificados na nova janela
+        novaJanela.document.write(` 
+            <!DOCTYPE html>
+            <html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <title>Portfólio Certificados</title>
+                <style>
+                    /* --- ESTILOS GERAIS --- */
 
-                .p {
-                    font-size: 16px;
-                    color: #555;
-                    margin-top: 5px;}
+                    body {
+                        font-family: Arial, sans-serif; /* Fonte limpa e legível */
+                        text-align: center; /* Centraliza o texto */
+                        background-color: #f9f9f9; /* Cor de fundo clara */
+                        margin: 0; /* Remove margens padrão */
+                        padding: 20px; /* Espaçamento interno */
+                        box-sizing: border-box; /* Inclui padding e border na largura/altura total */
+                        overflow-y: scroll; /* Permite rolagem vertical se houver muitos certificados */ 
+                    }
+
+                    h1 {
+                        margin-bottom: 30px; /* Espaçamento abaixo do título */
+                        color: #333; /* Cor do texto do título */
+                    }
+
+                    /* --- ESTILOS DA GALERIA --- */
+                    .galeria { 
+                        display: flex; /* Habilita o Flexbox para alinhamento e distribuição */ 
+                        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+                        gap: 25px; /* Espaçamento entre os itens da galeria */ 
+                        justify-content: center; /* Centraliza os itens horizontalmente */
+                        padding: 10px; /* Espaçamento interno da galeria */
+                    }
                     
-            </style>
-        </head>
-        <body>
-            <h1>Portfólio Certificados </h1> <!-- Corrigido: título exibido -->
-            <div class="galeria">
-                <img src="cursos/diopro1.jpg" alt="Imagem 1">
-                <p><b> Ri Happy - Front-end do Zero</b></p> <!-- Descrição da imagem --><b>
+                    /* Contêiner para definir o tamanho FIXO para todos os certificados */
+                    .certificado-item {
+                        /* Dimensões uniformes: Todos os cards terão este tamanho */
+                        width: 320px; 
+                        height: 250px; 
+                        border-radius: 10px;
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+                        overflow: hidden; /* Garante que nada 'saia' do contêiner */
+                        transition: transform 0.3s, box-shadow 0.3s;
+                        display: flex; 
+                        flex-direction: column; /* Organiza a imagem e o texto verticalmente */
+                        align-items: center;
+                        background-color: #fff; 
+                        border: 1px black solid 
+                    }
 
-                
-                <img src="cursos/rihappy1.jpg" alt="Imagem 1">
-                <p><b> Ri Happy -Bootcamp</b></p> <!-- Descrição da imagem --><b>
-                
-                
-            </div>
-        </body>
-        </html>
-    `);
-});
+                    /* Efeito de hover (passar o mouse) no card */
+                    .certificado-item:hover {
+                        transform: translateY(-5px); /* Move o card levemente para cima */
+                        box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* Aumenta a sombra */
+                    }
 
-// Comentários:
-// - Corrigido o id do botão do portfólio para "abrir-portfolio" (igual ao HTML).
-// - Adicionado título "Portfólio" na nova janela.
-// - Comentários explicativos em cada parte alterada.
+                    /* Ajusta a imagem dentro do contêiner FIXO */
+                    .certificado-item img {
+                        width: 100%; /* Ocupa 100% da largura do contêiner */
+                        height: 80%; /* Ocupa 80% da altura total do contêiner, deixando 20% para a descrição */
+                        object-fit: cover; 
+                        /* 'cover' faz a imagem preencher o espaço inteiro, cortando as bordas se a proporção for diferente. 
+                           Isso força todas a terem a mesma dimensão visual. */
+                        border-radius: 10px 10px 0 0; /* Arredonda só os cantos superiores */
+                    }
+                    
+                    /* Estilo para o parágrafo de descrição */
+                    .p {
+                        font-size: 16px;
+                        color: #333;
+                        font-weight: bold;
+                        padding: 5px 10px;
+                        margin: auto 0 0 0; /* Alinha o texto na parte de baixo do contêiner */
+                        height: 20%; /* Ocupa os 20% restantes da altura */
+                        display: flex;
+                        align-items: center; /* Centraliza o texto verticalmente */
+                        justify-content: center; /* Centraliza o texto horizontalmente */
+                        text-align: center;
+                    }
+                    
+                    /* --- AQUI IRIA A MEDIA QUERY SIMPLIFICADA (para celular), se você quisesse --- */
+                    
+                </style>
+            </head>
+            <body>
+                <h1>Portfólio Certificados</h1>
+                <div class="galeria">
+
+                    <div class="certificado-item">
+                        <img src="cursos/diopro.jpg" alt="Certificado Dio Pro">
+                        <p>Dio Pro</p>
+                    </div>
+
+                    <div class="certificado-item">
+                        <img src="cursos/diopro1.jpg" alt="Certificado Ri Happy Front-end do Zero">
+                        <p>Ri Happy - Front-end do Zero</p>
+                    </div>
+
+                    <div class="certificado-item">
+                        <img src="cursos/diopro2.jpg" alt="Certificado Ri Happy Bootcamp">
+                        <p>Ri Happy - Bootcamp (DB e Estrutura)</p>
+                    </div>
+                    
+                    <div class="certificado-item">
+                        <img src="cursos/rihappy1.jpg" alt="Certificado Ri Happy Bootcamp">
+                        <p>Ri Happy - Bootcamp (Front-end)</p>
+                    </div>
+                        
+                    
+                </div> </body>
+            </html>
+        `);
+    });
+}

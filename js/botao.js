@@ -63,7 +63,7 @@ if (abrirPortfolio) {
                         flex-direction: column; /* Organiza a imagem e o texto verticalmente */
                         align-items: center;
                         background-color: #fff; 
-                        border: 1px black solid 
+                        border: 5px blue solid 
                     }
 
                     /* Efeito de hover (passar o mouse) no card */
@@ -121,6 +121,11 @@ if (abrirPortfolio) {
                     
                     <div class="certificado-item">
                         <img src="cursos/rihappy1.jpg" alt="Certificado Ri Happy Bootcamp">
+                        <p>Ri Happy - Bootcamp (Front-end)</p>
+                    </div>
+
+                    <div class="certificado-item">
+                        <img src="cursos/githubdiopro.jpg" alt="Projeto Open Source Dio Pro">
                         <p>Ri Happy - Bootcamp (Front-end)</p>
                     </div>
                         

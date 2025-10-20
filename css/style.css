@@ -3,19 +3,19 @@
  */
 body {
     margin: 0; /* Remove margem padrão */
-    background-color: #20d63e; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
-    flex-direction: column; 
-    padding: 50px 0; 
-    background-image: url("../img/olhar.jpeg");  
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border: white;
+    background-color: #20d63e; /* Fundo verde claro */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fonte sans-serif para boa legibilidade */
+    display: flex; /* Usa Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que ocupe toda a altura da tela */
+    flex-direction: column; /* Alinha os itens em coluna */
+    padding: 50px 0;   /* Espaçamento superior e inferior */
+    background-image: url("../img/olhar.jpeg");  /* Imagem de fundo */
+    background-repeat: no-repeat;/* Não repete a imagem */
+    background-size: cover;/* Cobre toda a área */
+    background-position: center;/* Centraliza a imagem */
+    border: white;/* Cor da borda */
 }
 
 /*
@@ -23,15 +23,15 @@ body {
  */
 h1 {
     font-family: 'Times New Roman', Times, serif; /* Fonte clássica para o título */
-    border-radius: 8px;
-    background-color: rgb(15, 106, 30);
-    font-size: 30px;
-    text-align: center;
+    border-radius: 8px; /* Cantos arredondados */
+    background-color: rgb(15, 106, 30); /* Fundo verde escuro */
+    font-size: 30px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
     border: 5px solid #ffffff; /* borda externa colorida */
     margin-top: 10px; /* Espaço acima do cartão */
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Transição suave para mudanças de cor */
     display: block; /* Cada link ocupa uma linha */
-    color: white;
+    color: white; /* Cor do texto */
 }
  p {
     font-family: comiComic Sans MS, Comic Sans, cursive;/* Fonte casual para o texto */
@@ -39,12 +39,12 @@ h1 {
     color: white; /* Cor do texto */
     text-align: center; /* Centraliza o texto */
     background-color: rgb(15, 106, 30);
-    border-radius: 20px;
+    border-radius: 20px; /* Cantos arredondados */
     max-width: 300px; /* Largura MÁXIMA do cartão */
     width: 90%; /* Ocupa 90% da largura disponível, até o limite de 300px */
     border: 5px solid #fdfdfd; /* borda externa colorida */
     margin-top: 10px; /* Espaço acima do cartão */
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Transição suave para mudanças de cor */
     display: block; /* Cada link ocupa uma linha */
  }
 
@@ -107,14 +107,14 @@ h1 {
 /* Estilo dos Links individuais dentro da div de Redes */
 #redes-sociais a {
     display: block; /* Cada link ocupa uma linha */
-    text-decoration: none; 
+    text-decoration: none;  /* Remove sublinhado */
     color: white; /* Cor do texto no link */
-    font-weight: bold; 
+    font-weight: bold;  /* Negrito para destaque */
     background-color: #20d63e; /* Cor de fundo para simular um botão */
-    padding: 10px 0; 
-    margin: 10px auto;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    padding: 10px 0;  /* Espaçamento interno */
+    margin: 10px auto; /* Espaçamento entre os links */
+    border-radius: 8px; /* Cantos arredondados */
+    transition: background-color 0.3s; /* Transição suave para mudanças de cor */
 }
 
 #redes-sociais a:hover {
@@ -125,33 +125,33 @@ h1 {
  * ESTILO DO BOTÃO DE TROCA DE TEMA
  */
 #trocar-tema {
-    display: block; 
-    margin: 20px auto 0 auto; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    background-color: #20d63e; 
-    color: white; 
-    cursor: pointer; 
-    transition: background-color 0.3s;
+    display: block;  /* Ocupa toda a largura disponível */
+    margin: 20px auto 0 auto;   /* Centraliza horizontalmente com margem superior */
+    padding: 10px 20px;  /* Espaçamento interno */
+    border: none;  /* Remove borda padrão */
+    border-radius: 5px;  /* Cantos arredondados */
+    background-color: #20d63e;  /* Fundo verde */
+    color: white;  /* Texto branco */
+    cursor: pointer;  /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s;   /* Transição suave para mudanças de cor */
 }
 
 #trocar-tema:hover {
-    background-color: #4d5b60;
+    background-color: #4d5b60; /* Efeito ao passar o mouse */
 }
 
 /*
  * ESTILOS DO TEMA ESCURO (Aplicados quando a classe 'tema-escuro' é adicionada ao body pelo JavaScript)
  */
 body.tema-escuro {
-    background-color: #222;
-    color: #f0f0f0;
+    background-color: #222; /* Fundo escuro */
+    color: #f0f0f0; /* Texto claro */
 }
 
-body.tema-escuro #foto,
+body.tema-escuro #foto, 
 body.tema-escuro #redes-sociais {
     background-color: #333; /* Fundo escuro para os cartões */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);  /* Sombra mais intensa */
 }
 
 body.tema-escuro #foto h1,
@@ -160,38 +160,38 @@ body.tema-escuro #foto p {
 }
 
 body.tema-escuro #redes-sociais a {
-    background-color: #555;
-    color: #aaf;
+    background-color: #555; /* Fundo escuro para os links */
+    color: #aaf; /* Texto claro */
 }
 
 body.tema-escuro #redes-sociais a:hover {
-    background-color: #666;
+    background-color: #666; /* Efeito ao passar o mouse */
 }
 
 body.tema-escuro #trocar-tema { 
-    background-color: #777;
-    color: white;
-}
+    background-color: #777; /* Fundo cinza */
+    color: white; /* Texto branco */
+} 
 
 hr {
     color: black; /* Cor da linha horizontal */
 }
 
 #portfolio {
-    display: block; 
-    margin: 20px auto 0 auto; 
-    padding: 10px 40px; 
-    border: none; 
-    border-radius: 5px; 
-    background-color: #20d63e; 
-    color: white; 
-    cursor: pointer; 
-    transition: background-color 0.3s;
+    display: block;  /* Ocupa toda a largura disponível */
+    margin: 20px auto 0 auto;  /* Centraliza horizontalmente com margem superior */
+    padding: 10px 40px;  /* Espaçamento interno */
+    border: none;  /* Remove borda padrão */ 
+    border-radius: 5px;  /* Cantos arredondados */
+    background-color: #20d63e;  /* Fundo verde */
+    color: white;  /* Texto branco */
+    cursor: pointer;  /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para mudanças de cor */   
 }
 
 
 #email a {
-    color: #070606;
-    text-decoration: none;
+    color: #070606; /* Cor do texto no link */
+    text-decoration: none; /* Remove sublinhado */
 
 }

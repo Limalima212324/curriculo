@@ -121,6 +121,17 @@ h1 {
     background-color: #005f92; /* Efeito ao passar o mouse */
 }
 
+#whatsapp a {
+    display: block; /* Cada link ocupa uma linha */
+    text-decoration: none;  /* Remove sublinhado */
+    color: white; /* Cor do texto no link */
+    font-weight: bold;  /* Negrito para destaque */
+    /* background-color: #20d63e; Cor de fundo para simular um botão */
+    padding: 10px 0;  /* Espaçamento interno */
+    margin: 10px auto; /* Espaçamento entre os links */
+    border-radius: 8px; /* Cantos arredondados */
+    transition: background-color 0.3s; /* Transição suave para mudanças de cor */
+}
 /*
  * ESTILO DO BOTÃO DE TROCA DE TEMA
  */
